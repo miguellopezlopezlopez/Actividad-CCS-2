@@ -1,0 +1,49 @@
+/*Explicación Posicionamiento 1*/
+#caja3 {
+    background-color: yellow;
+    position: relative;
+    top: 50px;
+    left: 50px;
+  }
+  /*
+    La caja 3 se desplaza 50 px hacia abajo y hacia la derecha respecto a su posicion original. y aunque parece que se mueve
+    sigue manteniendo el espacio original, el cual afecta al posicionamiento de los demas elementos
+  */
+
+  /*Explicación Posicionamiento 2*/
+  #caja3 {
+    background-color: yellow;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+  }
+  #container {
+    position: relative;
+    left: 50px;
+    width: 300px;
+    margin: 0px auto;
+    margin-top: 20px;
+    border: 1px solid black;
+  }
+
+  /*
+    Ahora la caja 3 tiene un posicionamiento absoluto, por lo tanto permite salirse del flujo normal y superponerse a otros elementos
+    pero a diferencia del posicinamiento relativo no conserva su espacio original y puede ser ocupado por otros elementos, en este caso la caja 4
+  */
+
+
+  /*Explicación Posicionamiento 3*/
+  h2 {
+    position: fixed;
+    width: 100%;
+    background-color: red;
+    text-align: center;
+    margin: 0px auto;
+    line-height: 50px;
+  }
+
+/*
+  Al darle un posicionamiento fijo se posiciona en una posición fija en la página y no varia durante el scroll, quedando en pantalla todo el rato sin moverse
+  y al darle un ancho del 100% utliza todo el ancho de la página y con el color de fondo rojo se aprecia perfectamente como ocupa todo el espacio
+  quedando visualmente bastante feo, pero con un buen equilibrio de tamaños es una gran opción de diseño
+*/
